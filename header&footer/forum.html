@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <script src="https://kit.fontawesome.com/b5dde33e16.js" crossorigin="anonymous"></script>
+    <script src="jquery/jquery-3.7.1.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Document</title>
+</head>
+<style>
+    /* tr:nth-child(odd) {
+            height: 70px;
+            background-color: lightblue;
+        } */
+
+    /* td {
+            width: 170px;
+        } */
+
+
+    img {
+        width: 140px;
+        height: 100px;
+        object-fit: contain;
+    }
+
+    /* .title {
+        width: 700px;
+    } */
+
+    .imglist-text {
+        padding: 13px;
+    }
+
+    .b-list_brief {
+        font-size: 13px;
+    }
+
+    a {
+        text-decoration: none;
+        color: rgb(61, 45, 45);
+    }
+
+    a:hover {
+        color: rgb(197, 37, 189);
+    }
+</style>
+
+<body>
+    <!-- 頁首  start -->
+    <div>
+        <nav class="row navbar-brand border-opacity-10 my-header"
+            style="background: linear-gradient(to top, #fec7ff, #cc7edd, #8c56c5);">
+            <a href="#" class="col-sm-2">
+                <img src="image/logo-hw.png" class="my-logo" alt="" style="margin-left: 3rem;">
+            </a>
+            <ul class="col-sm-8 d-flex list-group-numbered align-self-center text-center fs-5"
+                style="margin: 0; color: #fff;">
+                <li class="flex-fill"><a href="" class="list-group-item-action list-group-item">訂閱</a></li>
+                <li class="flex-fill"><a href="" class="list-group-item-action list-group-item">類別</a></li>
+                <li class="flex-fill"><a href="" class="list-group-item-action list-group-item">排行榜</a></li>
+                <li class="flex-fill"><a href="" class="list-group-item-action list-group-item">論壇</a></li>
+                <li class="flex-fill"><a href="" class="list-group-item-action list-group-item">客服</a></li>
+                <li class="flex-fill"><a href="" class="list-group-item-action list-group-item"></a></li>
+                <li class="flex-fill"><a href="" class="list-group-item-action list-group-item"></a></li>
+            </ul>
+            <ul class="col-sm-2 d-flex list-group-numbered align-self-center text-center fs-4"
+                style="margin: 0; color: #fff;">
+                <li class="flex-fill"><a href=""
+                        class="justify-content-center align-items-center list-group-item-action"><i
+                            class="bi bi-search"></i></a></li>
+                <li class="flex-fill"><a href="" class="list-group-item-action"><i class="bi bi-person-circle"></i></a>
+                </li>
+                <li class="flex-fill"><a href="" class="list-group-item-action"><i class="bi bi-cart-plus"></i></a></li>
+            </ul>
+        </nav>
+    </div>
+    <!-- 頁首 end -->
+
+    <!-- middle  start-->
+    <div class="mt-2 m-auto" style="width: 90%;">
+        <div class="d-flex m-auto">
+            <div style="width:100% ;" class="shadow border border-1 rounded w-100">
+                <div class="">
+                    <div class="d-flex justify-content-around w-25 m-auto">
+                        <div>
+                            <a href="" class="btn btn-outline-secondary"><i class="fa-solid fa-caret-left"></i></a>
+                        </div>
+
+                        <div>
+                            <p class="page">
+                                <a href="" class="btn btn-outline-secondary">1</a>
+                                <a href="" class="btn btn-outline-secondary">2</a>
+                                <a href="" class="btn btn-outline-secondary">3</a>
+                            </p>
+                        </div>
+                        <div>
+                            <a href="" class="btn btn-outline-secondary"><i class="fa-solid fa-caret-right"></i></a>
+                        </div>
+                    </div>
+
+                    <a href="" class="btn btn-outline-secondary">New</a>
+                    <a href="" class="btn btn-outline-secondary">Hot</a>
+                </div>
+
+                <table class="table table-striped table-Info table-hover mt-2">
+                    <tbody>
+                        <tr class="bg-secondary bg-gradient text-white">
+                            <th scope="col" style="font-size: small;">留言數</th>
+                            <th scope="col" style="font-size: small;">文章列表</th>
+                            <th scope="col" style="font-size: small;">互動人氣</th>
+                            <th scope="col" style="font-size: small;">最新回覆</th>
+                        </tr>
+                        <tr>
+                            <td scope="col" class="align-middle">
+                                <p><i class="fa-solid fa-message"></i> <span>500</span></p>
+                            </td>
+                            <td class="title align-middle">
+                                <a href="/artical.html" class="d-flex">
+                                    <img src="https://upload-os-bbs.hoyolab.com/upload/2024/04/30/6729e8f3a5c9291c41a558149aedf71b_927294122593169208.jpg"
+                                        alt="">
+                                    <div class="imglist-text">
+                                        <div class="b-list_title">【情報】網頁活動「碎片拾憶」(40原石)</div>
+                                        <div class="b-list_brief text-secondary">過往的記憶如同拼圖通常…將它們拼湊在一起，便能勾勒出我們走過的路。</div>
+                                    </div>
+                                </a>
+                            </td>
+                            <td class="align-middle">
+                                <p> <i class="fa-solid fa-eye"></i><span>1000</span></p>
+                            </td>
+                            <td class="align-middle">
+                                <p>2024/05/08</p>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td scope="col" class="align-middle">
+                                <p><i class="fa-solid fa-message"></i> <span>500</span></p>
+                            </td>
+                            <td class="title align-middle">
+                                <a href="" class="d-flex">
+                                    <img src="https://truth.bahamut.com.tw/s01/202405/forum/36730/8dd14bd1cf873a19b6abfb04d519ae97.JPG?w=300&h=300&fit=o"
+                                        alt="">
+                                    <div class="imglist-text">
+                                        <div class="b-list_title">【轉載】香菱【心臓弱眞君插畫系列】</div>
+                                        <div class="b-list_brief text-secondary">繪師:心臓弱眞君@xinzoruo
+                                            https://twitter.com/xinzoruo?lang=zh-Hant
+
+                                            連鍋巴都嚇一跳了。申鶴，夜蘭淡定路過</div>
+                                    </div>
+                                </a>
+                            </td>
+                            <td class="align-middle">
+                                <p> <i class="fa-solid fa-eye"></i><span>1000</span></p>
+                            </td>
+                            <td class="align-middle">
+                                <p>2024/05/08</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <!-- 右側 -->
+            <div class=" m-3 p-1">
+                <div class=" bg-secondary bg-gradient p-3 rounded ">
+                    <input type="text" class="w-75">
+                    <button><i class="fa-solid fa-magnifying-glass"></i></button>
+                </div>
+                <div class="mt-4 bg-secondary bg-gradient p-3 rounded ">
+                    <a href="/Post.html" class="btn btn-outline-light">快來發文吧!</a>
+
+                    <i class="fa-sharp fa-solid fa-pen-nib "></i>
+                </div>
+                <div class="mt-4 bg-secondary bg-gradient p-3 rounded text-white">
+                    <h4>最新遊戲新聞</h4>
+                    <ul class="list-group">
+                        <li class="list-group-item list-group-item-action"><a
+                                href="https://tw.news.yahoo.com/%E3%80%8A%E5%B4%A9%E5%A3%9E%EF%BC%9A%E6%98%9F%E7%A9%B9%E9%90%B5%E9%81%93%E3%80%8B22%E7%89%88%E6%96%B0%E8%A7%92%E3%80%8C%E7%9F%A5%E6%9B%B4%E9%B3%A5%E3%80%8D%E6%94%BB%E7%95%A5%EF%BC%9A%E7%B5%84%E9%9A%8A%E5%BB%BA%E8%AD%B0%E3%80%81%E5%85%89%E9%8C%90%E9%81%BA%E5%99%A8%E6%8E%A8%E8%96%A6-222105335.html">《崩壞：星穹鐵道》2.2版新角「知更鳥」攻略：組隊建議、光錐&遺器推薦</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- middle end -->
+
+    <!-- 頁尾 start -->
+    <div class="footer row d-flex my-footer border-top border-opacity-10" style="white-space:nowrap;">
+        <div class="col-sm-4 flex-fill text-end">
+            <a href="#"><img class="my-footer-logo" src="image/logo-b.png" alt=""></a>
+        </div>
+        <nav class="col-sm-4">
+            <h5>常見問題 / 協助</h5>
+            <ul>
+                <li><a href="" class="list-group-item-action list-group-item w-25">帳號問題</a></li>
+                <li><a href="" class="list-group-item-action list-group-item w-25">訂單問題</a></li>
+                <li><a href="" class="list-group-item-action list-group-item w-25">條款與銷售細則</a></li>
+                <li><a href="" class="list-group-item-action list-group-item w-25">法律聲明</a></li>
+            </ul>
+        </nav>
+        <nav class="col-sm-3">
+            <div class="row w-25">
+                <div class="col-6 text-center fs-2 my-fb">
+                    <a href="" class="list-group-item-action"><i class="bi bi-facebook"></i></a>
+                </div>
+                <div class="col-6 fs-2 my-yt">
+                    <a href="" class="list-group-item-action"><i class="bi bi-youtube"></i></a>
+                </div>
+                <div class="col-6 text-center fs-2 my-tt">
+                    <a href="" class="list-group-item-action"><i class="bi bi-twitter"></i></a>
+                </div>
+                <div class="col-6 fs-2 my-tw">
+                    <a href="" class="list-group-item-action"><i class="bi bi-twitch"></i></a>
+                </div>
+            </div>
+        </nav>
+        <div class="fs-6"> © 2024 Dan Gaming. All rights reserved.</div>
+    </div>
+    <!-- 頁尾 end -->
+
+    <script>
+        $(document).on("scroll", function () {
+            let value = $(document).scrollTop() > 20;
+
+            $(".my-header").css({
+                "background-color": value ? `rgb(172, 172, 172, 0.76)` : `rgb(52, 58, 64, 0)`,
+                "height": value ? "60px" : "80px",
+                "backdrop-filter": value ? "blur(5px)" : "blur(0px)"
+            })
+        }) 
+    </script>
+
+</body>
+
+</html>
