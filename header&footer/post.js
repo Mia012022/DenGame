@@ -1,3 +1,4 @@
+// 輸入圖片路徑 顯示照片
 $(document).ready(function() {
     $('#imageInput').on('change', function(e) {
       var file = e.target.files[0];
@@ -5,11 +6,22 @@ $(document).ready(function() {
   
       reader.onload = function(e) {
         var imageData = e.target.result;
-        $('#imageDisplayArea').html('<img src="' + imageData + '" alt="Selected Image" style="width:400px;">');
+        $('#imageInput').after('<div id="imageDisplayArea" style="width: 100%;"></div>');
+        $('#imageDisplayArea').html('<img src="' + imageData + '" alt="Selected Image" style="width:100%;object-fit:cover;">');
       };
   
       reader.readAsDataURL(file);
     });
+// 監聽字數
+    $('#textInput').on('input', function() {
+      var currentLength = $(this).val().length;
+      $('#charCount').text(currentLength + '/100');
+    });
+// 更換顏色
+    $('#changeColor').on('click',function(e){
+      e.preventDefault();
+      $('#contentInput').css('color','red');
+    })
+
   });
-  
   

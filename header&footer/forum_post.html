@@ -16,14 +16,15 @@
     <title>---------</title>
 </head>
 <style>
-
-    .btnNobr{
+    .btnNobr {
         border: 0;
-        background-color: white;
+        background-color: none;
         color: gray;
         font-size: 20px;
+        border-radius: 20px;
     }
-    .btnNobr:hover{
+
+    .btnNobr:hover {
         color: lightseagreen;
     }
 
@@ -35,6 +36,14 @@
 
     a:hover {
         color: rgb(197, 37, 189);
+    }
+
+    #imageDisplayArea {
+        border: 1px solid #ccc;
+        padding: 10px;
+        margin-top: 10px;
+        max-width: 100%;
+        overflow-x: auto;
     }
 </style>
 
@@ -51,7 +60,8 @@
                 <li class="flex-fill"><a href="" class="list-group-item-action list-group-item">訂閱</a></li>
                 <li class="flex-fill"><a href="" class="list-group-item-action list-group-item">類別</a></li>
                 <li class="flex-fill"><a href="" class="list-group-item-action list-group-item">排行榜</a></li>
-                <li class="flex-fill"><a href="forum_index.html" class="list-group-item-action list-group-item">論壇</a></li>
+                <li class="flex-fill"><a href="forum_index.html" class="list-group-item-action list-group-item">論壇</a>
+                </li>
                 <li class="flex-fill"><a href="" class="list-group-item-action list-group-item">客服</a></li>
                 <li class="flex-fill"><a href="" class="list-group-item-action list-group-item"></a></li>
                 <li class="flex-fill"><a href="" class="list-group-item-action list-group-item"></a></li>
@@ -81,45 +91,56 @@
                 <h3 class="border-bottom p-2">發文</h3>
                 <div class="form-row">
                     <div class="form-group col-md-6 mb-4">
-                        <label>封面</label><i class="bi bi-card-image"></i>
+                        <i class="bi bi-card-image"></i><label class="ms-1">封面</label>
                         <input id="imageInput" type="file" class="form-control">
-                        
+                        <!--  .after <div id="imageDisplayArea" style="width: 100%;"></div> -->
                     </div>
                     <div>
-                    <div id="imageDisplayArea" style="width: 100%;"></div></div>
-                    <div class="form-group mb-4">
-                        <label>標題</label><i class="bi bi-vector-pen"></i>
-                        <input type="text" class="form-control">
+
                     </div>
-    
-    
                     <div class="form-group mb-4">
-                        <label>內文</label><i class="bi bi-pencil-fill"></i>
-                        <!-- 符號貼圖 -->
-                        <div>
-                            <button class="btnNobr" aria-label="撤回"><i class="bi bi-arrow-90deg-left" ></i></button>
-                            <button class="btnNobr" aria-label="復原"><i class="bi bi-arrow-90deg-right" ></i></button>
-                            <button class="btnNobr" aria-label=""><i class="bi bi-emoji-laughing"></i></button>
-                            <button class="btnNobr" aria-label=""><i class="bi bi-images"></i></button>
-                            <button class="btnNobr" aria-label=""><i class="bi bi-camera-video"></i></button>
-                            <button class="btnNobr" aria-label=""><i class="bi bi-bar-chart-line"></i></button>
-                            <button class="btnNobr" aria-label=""><i class="bi bi-link"></i></button>
-                            <button class="btnNobr" aria-label=""><i class="bi bi-type-bold"></i></button>
-                            <button class="btnNobr" aria-label=""><i class="bi bi-type-italic"></i></button>
-                            <button class="btnNobr" aria-label=""><i class="bi bi-type-strikethrough"></i></button>
-                            <button class="btnNobr" aria-label=""><i class="bi bi-type-underline"></i></button>
-                            <button class="btnNobr" aria-label=""><i class="bi bi-fonts"></i></button>
-                            <button class="btnNobr" aria-label=""><i class="bi bi-palette"></i></button>
-                            <button class="btnNobr" aria-label=""><i class="bi bi-paint-bucket"></i></button>
-                            <button class="btnNobr" aria-label=""><i class="bi bi-justify"></i></button>
-                            <button class="btnNobr" aria-label=""><i class="bi bi-justify-left"></i></button>
-                            <button class="btnNobr" aria-label=""> <i class="bi bi-justify-right"></i></button>
-                                
-                           
+                        <i class="bi bi-vector-pen"></i><label class="ms-1">標題</label>
+                        <div class="input-group">
+                            <input id="textInput" type="text" class="form-control" maxlength="200" auto-height
+                                placeholder="請輸入標題(必填)">
+                            <div class="input-group-append"><span id="charCount" class="input-group-text">0/200</span>
+                            </div>
                         </div>
-                        <textarea class="form-control" rows="10" cols="1000"></textarea>
                     </div>
-    
+
+
+                    <div class="form-group mb-4  ">
+                        <i class="bi bi-pencil-fill"></i><label class="ms-1">內文</label>
+                        <!-- 符號貼圖 -->
+                        <div class="ps-2 d-flex bg-light bg-gradient rounded">
+                            <button class="btnNobr" aria-label="撤回"><i class="bi bi-arrow-90deg-left"></i></button>
+                            <button class="btnNobr" aria-label="復原"><i class="bi bi-arrow-90deg-right"></i></button>
+                            <div class="ms-5">
+                                <button class="btnNobr" aria-label=""><i class="bi bi-emoji-laughing"></i></button>
+                                <button class="btnNobr" aria-label=""><i class="bi bi-images"></i></button>
+                                <button class="btnNobr" aria-label=""><i class="bi bi-camera-video"></i></button>
+                                <button class="btnNobr" aria-label=""><i class="bi bi-bar-chart-line"></i></button>
+                                <button class="btnNobr" aria-label=""><i class="bi bi-link"></i></button>
+                                <button class="btnNobr" aria-label=""><i class="bi bi-type-bold"></i></button>
+                                <button class="btnNobr" aria-label=""><i class="bi bi-type-italic"></i></button>
+                                <button class="btnNobr" aria-label=""><i class="bi bi-type-strikethrough"></i></button>
+                                <button class="btnNobr" aria-label=""><i class="bi bi-type-underline"></i></button>
+                                <button class="btnNobr" aria-label=""><i class="bi bi-fonts"></i></button>
+                                <!-- 字體顏色 -->
+                                
+                                <button id="changeColor" class="btnNobr " aria-label=""><i class="bi bi-palette"></i></button>
+                                        
+
+                                <button class="btnNobr" aria-label=""><i class="bi bi-paint-bucket"></i></button>
+                                <button class="btnNobr" aria-label=""><i class="bi bi-justify"></i></button>
+                                <button class="btnNobr" aria-label=""><i class="bi bi-justify-left"></i></button>
+                                <button class="btnNobr" aria-label=""> <i class="bi bi-justify-right"></i></button>
+                            </div>
+
+                        </div>
+                        <textarea id="contentInput" class="form-control" rows="10" cols="1000"></textarea>
+                    </div>
+
                     <div class="form-group mb-4">
                         <label for="">分類</label><i class="bi bi-check-all"></i>
                         <select name="" id="" class="form-control">
@@ -127,15 +148,15 @@
                             <option value="">2</option>
                         </select>
                     </div>
-    
+
                 </div>
-    
+
                 <div class="row justify-content-center">
                     <div class="col-6 ">
                         <div class="row justify-content-center">
                             <button class="btn btn-light w-50">預覽</button>
                         </div>
-    
+
                     </div>
                     <div class="col-6 ">
                         <div class="row justify-content-center">
@@ -143,11 +164,11 @@
                         </div>
                     </div>
                 </div>
-    
-    
-    
+
+
+
             </form>
-    
+
         </div>
     </div>
     <br>
@@ -207,7 +228,7 @@
         <div class="fs-6"> © 2024 Dan Gaming. All rights reserved.</div>
     </div>
     <!-- 頁尾 end -->
-     <script src="post.js"></script>
+    <script src="post.js"></script>
     <script>
         $(document).on("scroll", function () {
             let value = $(document).scrollTop() > 20;
@@ -218,7 +239,7 @@
                 "backdrop-filter": value ? "blur(5px)" : "blur(0px)"
             })
         }) 
-    </script> 
+    </script>
 </body>
 
 </html>
